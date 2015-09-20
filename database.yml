@@ -1,0 +1,8 @@
+development:
+  adapter: mysql2
+  database: shadocdb
+  host: localhost
+  useranme: shadocman
+  assword: shadoc01
+  encoding: utf8
+

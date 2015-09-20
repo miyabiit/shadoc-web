@@ -1,0 +1,25 @@
+<form class="form-inline" action="/" method="post">
+	<div class="form-group">
+		<label>&nbsp;KEYWORD</label>
+		<input type="text" class="form-control" id="search" name="search" placeholder="探したい言葉" />
+	</div>
+	<button type-"submit" class="btn btn-primary">検索</button>
+</form>
+<table class="table table-striped">
+<thead>
+<tr>
+	<th width="10%">保管場所</th>
+	<th>キーワード</th>
+	<th width="10%">保管登録日</th>
+</tr>
+</thead>
+<tbody>
+<% @locations.each do |location| %>
+<tr>
+	<td><%= location.location_code %></td>
+	<td><%= location.keywords %></td>
+	<td><%= location.registered_on.strftime('%Y年%m月%d日')  %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
